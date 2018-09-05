@@ -7,14 +7,6 @@ const signin = require('./controllers/signin.js');
 const profile = require('./controllers/profile.js');
 const image = require('./controllers/image.js');
 
-const knex = require('knex')({
-    client: 'pg',
-    connection:{
-  		connectionString:process.env.DATABASE_URL,
-  		ssh:true,
-    }
-});
-
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
